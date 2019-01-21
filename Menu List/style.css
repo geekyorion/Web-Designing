@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  color: white;
+  font-family: 'helvetica neue';
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-size: 40px;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  min-width: 400px;
+  max-width: 600px;
+  width: 50vw;
+  margin: 2px;
+}
+
+.main {
+  padding: 10px 20px;
+  font-weight: 300;
+  color: #947abf;
+}
+
+.sub {
+  color: #a48ccb;
+  font-size: 30px;
+  transition: .25s;
+}
+
+.sub:hover {
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  letter-spacing: 4px;
+}
