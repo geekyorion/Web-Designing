@@ -1,0 +1,31 @@
+html {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #03a9f4, #9f7be3, #f441a5, #64c1ea, #9fea64, #1de07c, #9fea64, #64c1ea,#f441a5, #9f7be3, #03a9f4);
+  background-size: 2000%;
+  animation: animate 100s linear infinite;
+  color: white;
+  font-family: 'helvetica neue';
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  
+  100% {
+    background-position: 500%;
+  }
+}
