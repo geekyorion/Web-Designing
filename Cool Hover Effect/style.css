@@ -1,0 +1,33 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex:1;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  overflow: hidden;
+  background: #000;
+}
+
+div {
+  margin: 10%;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  color: silver;
+  border: none;
+  transition: 1s;
+}
+
+.card:hover {
+  color: white;
+  box-shadow: 0 0 5px 10px #ddd,
+              0 0 7px 25px #bbb,
+              0 0 9px 45px #999,
+              0 0 11px 70px #777,
+              0 0 13px 100px #555,
+              0 0 15px 135px #333,
+              0 0 17px 175px #111;
+}
