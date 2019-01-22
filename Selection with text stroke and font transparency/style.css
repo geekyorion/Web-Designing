@@ -1,0 +1,39 @@
+/* Code for Firefox */
+::-moz-selection {color: white;}
+::selection {color: white; text-shadow: 0 0 15px white;}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'helvetica neue';
+  font-weight: 200;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background : linear-gradient(90deg, #03a9f4, #9f7be3, #f441a5);
+}
+
+
+.demo {
+  text-align: center;
+  font-size: 15vw;
+  color: transparent;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.25);
+
+  /*
+  -webkit-text-stroke: 3px rgba(255, 255, 255, 0.25);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  */ /* this also works but remove the selection effect from the webpage */
+}
+
+.selected {
+  color: white;
+  text-shadow: 0 0 15px white;
+}
