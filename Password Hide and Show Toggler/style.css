@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'helvetica neue';
+  font-weight: 200;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background : linear-gradient(90deg, #03a9f4, #9f7be3, #f441a5);
+}
+
+p {
+  color: white;
+  font-size: 3vw;
+}
+
+.userPass {
+  padding: 10px;
+  width: 50vw;
+  max-width: 500px;
+  border: 2px solid #048ae9;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  float: left;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+}
+
+.toggler {
+  cursor: pointer;
+  float: left;
+  padding: 10px;
+  background: white;
+  border: 2px solid #048ae9;
+  border-left:none;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 100;
+  font-size: 20px;
+}
