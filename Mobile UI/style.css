@@ -1,0 +1,205 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  font-family: 'helvetica neue';
+  font-weight: 200;
+  background: linear-gradient(135deg, #ffdd94, #d0e6a5);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heading {
+  font-weight: 200;
+  text-align: center;
+  padding: 15px;
+  margin-top: 15px;
+  transition-duration: .5s;
+  background: linear-gradient(135deg, rgba(204, 171, 219, 0.4), rgba(134, 227, 206, 0.4));
+}
+
+.heading:hover {
+  letter-spacing: 10px;
+  margin: 15px 15px;
+  color: #1f4f59;
+}
+
+.mobile {
+  width: 300px;
+  height: 600px;
+  background: linear-gradient(135deg, #d6e8ee, #97cadb, #97cadb, #d6e8ee);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.topbar {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  display: flex;
+  background: #018abe;
+  color: white;
+  font-size: 13px;
+  box-shadow: inset 0 0 20px violet;
+}
+
+.topbar > * {
+  padding-top: 3px;
+  height: 20px;
+}
+
+.topbar .left {
+  padding-left:4%;
+  width: 33.5%;
+  text-align: left;
+}
+
+.topbar .left span {
+  padding: 3px;
+}
+
+.topbar .notch {
+  text-align: right;
+  background: black;
+  width: 25%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.notch span {
+  margin-right: 10px;
+}
+
+.topbar .right {
+  width: 33.5%;
+  padding-right: 4%;
+  text-align: right;
+}
+
+.main-screen {
+  height: 577px;
+  box-shadow: inset 0 0 5px 5px white;
+}
+
+.search-bar {
+  padding: 5px;
+  position: absolute;
+  top: 15%;
+  width: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-bar input {
+  padding: 10px;
+  text-align: center;
+  width: 83%;
+  box-sizing: border-box;
+  border: 1px solid #6181ff;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #e7e7e7 5%, #fff 20%, #fff 80%, #e7e7e7 95%);
+}
+
+.search-bar button {
+  padding: 10px;
+  border: 1px solid #6181ff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition-duration: .5s;
+}
+
+.search-bar button:hover {
+  background: white;
+}
+
+.main-text {
+  position: absolute;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'impact';
+  border-top: 1px solid white;
+  border-bottom: 1px solid black;
+  border-radius: 50px;
+  background: radial-gradient(rgba(0, 255, 255, 0.4), rgba(255, 255, 255, 0));
+}
+
+.main-text .text-time {
+  font-size: 35px;
+  color: #001b6b;
+}
+
+.main-text .text-date {
+  font-size: 25px;
+  color: #02457a;
+}
+
+.main-text .text-day {
+  font-size: 20px;
+  font-variant: small-caps;
+  color: #401980;
+}
+
+.main-text .text-quote {
+  font-size: 50px;
+  color: white;
+  text-shadow: 0 0 4px blue;
+}
+
+.mobile-apps {
+  position: absolute;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  top: 95%;
+  left: 50%;
+  width: 85%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border-top: 2px solid white;
+  background: rgba(25, 255, 255, 0.2);
+  border-radius: 15px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.mobile-apps .app {
+  border: 3px solid white;
+  display: inline-block;
+  width: 10%;
+  padding: 5px;
+  color: #001b6b;
+  border-radius: 40%;
+  transition-duration: .5s;
+  background: white;
+}
+
+.mobile-apps .app:hover {
+  background: #001b6b;
+  color: white;
+  border-radius: 50%;
+  transform: rotate(30deg);
+  cursor: pointer;
+}
+
+.mobile-apps .more-app {
+  width: 10%;
+  display: inline-block;
+  padding: 5px;
+  color: #001b6b;
+  transition-duration: .5s;
+}
+
+.mobile-apps .more-app:hover {
+  background: black;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
