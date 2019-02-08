@@ -1,0 +1,94 @@
+head {
+  height: 100vh;
+}
+
+body {
+  background: white;  
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'helvetica neue';
+  font-weight: 500;
+}
+
+.body-black {
+  background: black
+}
+
+.btn {
+  text-align: center;
+  margin: 20px;
+}
+
+.btn-toggle {
+  word-spacing: 5px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 90px;
+  transition: .5s;
+  box-shadow: 0 0 15px black;
+}
+
+.btn-toggle:hover {
+  background: black;
+  color: white;
+}
+
+.btn-black {
+  border: 2px solid white;
+  color: white;
+  box-shadow: 0 0 15px white;
+}
+
+.btn-black:hover {
+  background: white;
+  color: black;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.text-transparent {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
+.text-stroke-black {-webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 30vw;
+}
+
+.shadow {
+  width: 0;
+  height: 50vw;
+  animation: animate 5s infinite;
+  animation-timing-function: linear;
+  box-shadow: 0px 0px 10vw 8vw black;
+}
+
+.shadow-white {
+  box-shadow: 0px 0px 10vw 8vw white;
+}
+
+@keyframes animate {
+  0% {
+    left: -5%;
+  }
+  
+  100% {
+    left: 105%;
+  }
+}
