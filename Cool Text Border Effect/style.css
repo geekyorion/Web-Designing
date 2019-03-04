@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'helvetica neue';
+  background: linear-gradient(135deg, red, yellow);
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rotate {
+  padding: 10px;
+  text-align: center;
+  border: 35px solid black;
+  border-top: 35px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 35px solid rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  transition: 1s;
+  transform-origin: 50% 50%;
+  transition: 1s;
+}
+
+.data {
+  transition: 1s;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.rotate h1{
+  font-weight: 400;
+  font-size: 200px;
+  line-height: 150px;
+  transition: 1s;
+}
+
+.rotate p {
+  font-size: 40px;
+  transition: 1s;
+}
+
+.rotate:hover {
+  cursor: none;
+  transform: rotate(135deg);
+  border: 35px solid rgba(0, 0, 0, 0.5);
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+}
+
+.rotate:hover .data{
+  transform: rotate(-180deg);
+}
+
+.rotate:hover > * > * {
+  color: black;
+}
+
+/* .main:hover {
+  border: 35px solid black;
+  border-left: 35px solid rgba(0,0,0,0.05);
+  border-right: 35px solid rgba(0,0,0,0.05);
+}
+
+.main:hover h1 {
+  color: black;
+} */
