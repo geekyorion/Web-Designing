@@ -1,0 +1,66 @@
+body {
+  background: linear-gradient(45deg, #a5678e, #7facd6);
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: 'helvetica neue';
+}
+
+.pokemon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(180deg, #f00 50%, #fff 50%);
+  border: 5px solid black;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  transition: 1s;
+}
+
+.ball:hover {
+  transform: rotate(360deg);
+}
+
+.divider {
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  background: black;
+  height: 20px;
+}
+
+.divider:before {
+  content: '';
+  display: block;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  background: white;
+  border: 20px solid black;
+  border-radius: 50%;
+}
+
+.divider:after {
+  content: '';
+  display: block;
+  position: relative;
+  height: 45px;
+  width: 45px;
+  left: 50%;
+  top: -520%;
+  transform: translate(-50%, -40%);
+  background: #fef;
+  border: 2px solid black;
+  border-radius: 50%;
+}
