@@ -1,0 +1,85 @@
+html, body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'helvetica neue'
+}
+
+body {
+    background: linear-gradient(135deg, #185563, #19123c);
+}
+
+article {
+    position: relative;
+    height: 100vh;
+}
+.userInput {
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    top: 5%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-gap: 10px;
+}
+
+.userInput > * {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+.userInput input {
+    border-radius: 100px;
+    border: 1px solid white;
+    box-shadow: 0 0 30px 12px white inset;
+    background: rgba(200, 200, 255, 0.2);
+}
+
+.userInput input:focus {
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+    outline: none;
+    background: white;
+}
+
+.userInput button {
+    border-radius: 10px;
+    background: transparent;
+    color: white;
+    transition-duration: 0.5s
+}
+
+.userInput button:focus {
+    border-radius: 10px;
+    outline: none;
+    background: transparent;
+}
+
+.userInput button:hover {
+    background: white;
+    color: black;
+}
+
+.output {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#outputText {
+    box-sizing: border-box;
+    font-size: 20px;
+    text-align: justify;
+    color: white;
+    font-weight: 200;
+    background: rgba(24, 52, 80, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    word-break: break-all;
+    filter: drop-shadow(0 0 200px white);
+}
