@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'abel';
+    font-weight: 200;
+    color: white;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #8e2dd2, #4a00e0);
+    text-align: center;
+}
+
+.main-headings .main-title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 30px;
+}
+
+.hori {
+    width: 80vw;
+    max-width: 500px;
+    box-shadow: 0 0 10px 1px white;
+}
+
+.links {
+    padding: 20px;
+}
+
+.heading {
+    margin-bottom: 20px;
+    padding: 2px;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition-duration: .3s;
+    padding: 10px 30px;
+}
+
+.link:hover {
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px white;
+    border-right: 20px solid white;
+    border-left: 2px solid white;
+    box-shadow: 0 0 20px white inset;
+}
+
+.link:hover.link::before {
+    content: '\276f ';
+    margin-right: 20px;
+}
