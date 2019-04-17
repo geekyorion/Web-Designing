@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>N</title>
+    <!-- <meta http-equiv="refresh" content="1"> -->
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2b5876, #4e4376);
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 30px 10px rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            filter: drop-shadow(0 0 10px white);
+        }
+
+        .name {
+            fill: transparent;
+            stroke: white;
+            stroke-width: 3;
+            stroke-dasharray: 2130 0;
+            stroke-dashoffset: -50;
+            stroke-linecap: square;
+        }
+
+        .name:hover {
+            animation: animate-v1 4s linear;
+            /* animation: animate-v2 3s linear; */
+            /* animation-timing-function: cubic-bezier(0, 0.35, 0.99, 0.65); */
+        }
+
+        @keyframes animate-v1 {
+            0% {
+                stroke-dasharray: 100 965;
+                stroke-dashoffset: 250;
+                fill: white;
+                fill-opacity: 0.01;
+            }
+
+            25% {
+                stroke-dasharray: 340 725;
+                stroke-dashoffset: 340;
+                fill-opacity: 0.09;
+            }
+
+            50% {
+                stroke-dasharray: 615 450;
+                stroke-dashoffset: 500;
+                fill-opacity: 0.12;
+            }
+
+            75% {
+                stroke-dasharray: 965 100;
+                stroke-dashoffset: 667;
+                fill-opacity: 0.04;
+            }
+
+            100% {
+                stroke-dasharray: 1065 0;
+                stroke-dashoffset: 1013;
+                fill-opacity: 0;
+            }
+        }
+
+        @keyframes animate-v2 {
+            0% {
+                stroke-dasharray: 0 2131;
+            }
+
+            100% {
+                stroke-dasharray: 2131 0;
+                fill-opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg width="350px" height="400px">
+        <path class="name" d="M75 25 H25 V375 H75 V100 L275 375 H325 V25 H275 V300 Z" />
+    </svg>
+</body>
+
+</html>
