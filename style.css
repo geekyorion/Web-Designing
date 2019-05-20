@@ -7,8 +7,8 @@ html, body {
 }
 
 body {
-    height: 100%;
     background: linear-gradient(135deg, #8e2dd2, #4a00e0);
+    background-attachment: fixed;
     text-align: center;
 }
 
