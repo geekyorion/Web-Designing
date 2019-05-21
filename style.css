@@ -31,6 +31,9 @@ body {
 .heading {
     margin-bottom: 20px;
     padding: 2px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
 .link {
