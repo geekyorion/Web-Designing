@@ -1,0 +1,47 @@
+body {
+  font-family: 'Poiret One', cursive;
+  background: linear-gradient(45deg, #6a3f9c, #b599d6);
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  margin: 0;
+  text-align: center;
+  display: grid;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.content {
+  width: 100vw;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+.text {
+  font-size: 50px;
+}
+
+#year, #percent {
+  display: block;
+  font-size: 100px;
+}
+
+#percent {
+  font-size: calc(10vw + 10px);
+}
+
+#percent:after {
+  content: '%';
+}
+
+.details {
+  margin: 30px;
+  padding: 20px;
+  border: 2px solid white;
+  border-left: none;
+  border-right: none;
+}
+
+.details > * {
+  font-size: 20px;
+}
