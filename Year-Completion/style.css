@@ -2,6 +2,7 @@ body {
   font-family: 'Poiret One', cursive;
   background: linear-gradient(45deg, #6a3f9c, #b599d6);
   background-size: cover;
+  background-attachment: fixed;
   color: white;
   margin: 0;
   text-align: center;
