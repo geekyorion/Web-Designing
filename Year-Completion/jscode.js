@@ -1,5 +1,7 @@
 var month = ["January", "February", "March", "April", "May", "May", "June", "July", "August", "September", "October", "November", "December"];
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+var currTimeEl;
 var percentEl;
 var yearEl;
 var monthsEl;
@@ -38,6 +40,8 @@ function getTime() {
   completion = (pastTime*100/totalSeconds).toFixed(8);
   document.title = year+"---"+completion+"%";
   
+  currTimeEl.innerText = `${hours}:${minutes}:${seconds}\n[${days[date.getDay()]} - ${month[months]}]`;
+  
   yearEl.innerText = year;
   percentEl.innerText = completion;
   
@@ -50,6 +54,8 @@ function getTime() {
 
 window.onload = function() {
   setInterval(getTime, 1000);
+  
+  currTimeEl = document.getElementById("currentTime");
   
   percentEl = document.getElementById("percent");
   yearEl = document.getElementById("year");
