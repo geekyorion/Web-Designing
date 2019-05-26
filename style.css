@@ -9,6 +9,7 @@ html, body {
 body {
     background: linear-gradient(135deg, #8e2dd2, #4a00e0);
     background-attachment: fixed;
+    min-height: 100vh;
     text-align: center;
 }
 
