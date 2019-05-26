@@ -40,7 +40,7 @@ function getTime() {
   completion = (pastTime*100/totalSeconds).toFixed(8);
   document.title = year+"---"+completion+"%";
   
-  currTimeEl.innerText = `${hours}:${minutes}:${seconds}\n${days[date.getDay()]} - ${month[months]}, ${pastDays+1}`;
+  currTimeEl.innerText = `${hours}:${minutes}:${seconds}\n${days[date.getDay()]} - ${month[months]}, ${date.getDate()}`;
   
   yearEl.innerText = year;
   percentEl.innerText = completion;
