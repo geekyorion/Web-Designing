@@ -26,7 +26,7 @@ body {
 }
 
 #percent {
-  font-size: calc(10vw - 10px);
+  font-size: 10vw;
 }
 
 #percent:after {
