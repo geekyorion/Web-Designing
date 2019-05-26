@@ -1,0 +1,64 @@
+* {
+  font-family: 'Source Code Pro', monospace;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+button {
+  transition-duration: .5s;
+}
+
+.generate {
+  padding: 15px 30px;
+  font-size: 1em;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+}
+
+.generate:focus, .copy:focus {
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+  filter: invert(100%);
+}
+
+.message {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  width: 100%;
+  animation: animate 1s linear;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
