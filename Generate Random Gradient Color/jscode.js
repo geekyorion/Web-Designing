@@ -3,7 +3,7 @@ var gradient;
 function generateRandom() {
 //   return parseInt(Math.random()*255).toString(16);
 //   now it is not converting the number from decimal base to hex base
-  return Math.random()*255;
+  return parseInt(Math.random()*255);
 }
 
 function generateBackground() {
