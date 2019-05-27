@@ -1,11 +1,15 @@
 var gradient;
 
 function generateRandom() {
-  return parseInt(Math.random()*255).toString(16);
+//   return parseInt(Math.random()*255).toString(16);
+//   now it is not converting the number from decimal base to hex base
+  return Math.random()*255;
 }
 
 function generateBackground() {
-  gradient = `linear-gradient(135deg, #${generateRandom()}${generateRandom()}${generateRandom()}, #${generateRandom()}${generateRandom()}${generateRandom()})`;
+//   gradient = `linear-gradient(135deg, #${generateRandom()}${generateRandom()}${generateRandom()}, #${generateRandom()}${generateRandom()}${generateRandom()})`;
+//   use RGB() method so that it works faster
+  gradient = `linear-gradient(135deg, rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}), rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}))`;
   document.body.style.background = gradient;
 }
 
