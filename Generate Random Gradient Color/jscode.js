@@ -18,7 +18,7 @@ function appendMessage() {
   message.innerText = "Code Copied";
   message.setAttribute("class", "message");
   document.body.appendChild(message);
-  setTimeout(()=>{message.remove();}, 1000);
+  setTimeout(()=>{message.remove();}, 1250);
 }
 
 function copyCode() {
