@@ -27,7 +27,10 @@ function copyCode() {
     background: -webkit-${gradient};
     background: -o-${gradient};
     background: ${gradient};
+    /* min-height: 100vh; to provide the gradient to the whole screen */
     min-height: 100vh;
+    /* margin: 0; is added so that page won't show scrollbar when the content is less */
+    margin: 0;
   }`;
   
   code.style.position = "absolute"; 
