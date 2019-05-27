@@ -1,4 +1,5 @@
 var gradient;
+var angle;
 
 function generateRandom() {
 //   return parseInt(Math.random()*255).toString(16);
@@ -7,15 +8,16 @@ function generateRandom() {
 }
 
 function generateBackground() {
-//   gradient = `linear-gradient(135deg, #${generateRandom()}${generateRandom()}${generateRandom()}, #${generateRandom()}${generateRandom()}${generateRandom()})`;
+  angle = 135;
+//   gradient = `linear-gradient(${angle}deg, #${generateRandom()}${generateRandom()}${generateRandom()}, #${generateRandom()}${generateRandom()}${generateRandom()})`;
 //   use RGB() method so that it works faster
-  gradient = `linear-gradient(135deg, rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}), rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}))`;
+  gradient = `linear-gradient(${angle}deg, rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}), rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}))`;
   document.body.style.background = gradient;
 }
 
-function appendMessage() {
+function appendMessage(msg) {
   var message = document.createElement("p");
-  message.innerText = "Code Copied";
+  message.innerText = msg;
   message.setAttribute("class", "message");
   document.body.appendChild(message);
   setTimeout(()=>{message.remove();}, 1000);
@@ -41,9 +43,35 @@ function copyCode() {
   document.execCommand("copy");
   code.remove();
   
-  appendMessage();
+  appendMessage("Code Copied");
+}
+
+function applyRotation(newAngle) {
+  gradient = gradient.replace(/\d+/, newAngle);
+  document.body.style.background = gradient;
+  angle = newAngle;
+  appendMessage(`Angle: ${angle}`)
+}
+
+function rotateAnti() {
+  var newAngle = angle - 45;
+  if(newAngle == -45) {
+    angle = 360
+    newAngle = 315;
+  }
+  applyRotation(newAngle);
+}
+
+function rotateClock() {
+  var newAngle = angle + 45;
+  if(newAngle == 405) {
+    angle = 0
+    newAngle = 45;
+  }
+  applyRotation(newAngle);
 }
 
 window.onload = function() {
   generateBackground();
+  angle = 135;
 }
