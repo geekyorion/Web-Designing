@@ -1,7 +1,7 @@
 var gradient;
 
 function generateRandom() {
-  return parseInt((Math.random()*256).toFixed()).toString(16);
+  return parseInt(Math.random()*255).toString(16);
 }
 
 function generateBackground() {
