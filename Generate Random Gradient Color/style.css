@@ -22,6 +22,11 @@ button {
   border-radius: 10px;
 }
 
+.rotate {
+  margin: 0;
+  font-size: 1.25em;
+  padding: 10px 15px;
+
 .copy {
   position: absolute;
   top: 10px;
@@ -33,7 +38,7 @@ button {
   color: white;
 }
 
-.generate:focus, .copy:focus {
+button:focus {
   outline: none;
 }
 
