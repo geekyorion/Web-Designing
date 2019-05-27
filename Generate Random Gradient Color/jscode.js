@@ -27,6 +27,7 @@ function copyCode() {
     background: -webkit-${gradient};
     background: -o-${gradient};
     background: ${gradient};
+    min-height: 100vh;
   }`;
   
   code.style.position = "absolute"; 
