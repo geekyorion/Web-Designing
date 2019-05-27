@@ -51,7 +51,7 @@ button:hover {
   transform: translate(-50%, -50%);
   font-size: 4em;
   width: 100%;
-  animation: animate 1s linear;
+  animation: animate 1.1s linear;
 }
 
 @keyframes animate {
