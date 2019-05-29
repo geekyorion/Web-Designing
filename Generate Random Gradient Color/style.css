@@ -68,3 +68,15 @@ button:hover {
     opacity: 0;
   }
 }
+
+.download {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.download a {
+  text-decoration: none;
+  color: white;
+}
