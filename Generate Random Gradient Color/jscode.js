@@ -1,10 +1,14 @@
 var gradient;
 var angle;
-var download;
 var color_first;
 var color_second;
 var h;
 var w;
+var resolution_first;
+var resolution_second;
+var resolution_third;
+var resolution_square;
+var resolution_device;
 
 function generateRandom() {
 //   return parseInt(Math.random()*255).toString(16);
@@ -79,17 +83,29 @@ function rotateClock() {
   applyRotation(newAngle);
 }
 
-function createCanvas() {
+function createCanvas(specifiedWidth, specifiedHeight) {
   var canvas = document.createElement('canvas');
-  canvas.setAttribute('height', h);
-  canvas.setAttribute('width', w);
+  canvas.setAttribute('height', specifiedHeight);
+  canvas.setAttribute('width', specifiedWidth);
   
   var context = canvas.getContext("2d");
-  var grd = context.createLinearGradient(0,0,w,h);
+  var grd;
+
+  switch(angle) {
+    case 45: grd = context.createLinearGradient(0, specifiedHeight, specifiedWidth, 0); break;
+    case 90: grd = context.createLinearGradient(0, 0, specifiedWidth, 0); break;
+    case 135: grd = context.createLinearGradient(0, 0, specifiedWidth, specifiedHeight); break;
+    case 180: grd = context.createLinearGradient(0, 0, 0, specifiedHeight); break;
+    case 225: grd = context.createLinearGradient(specifiedWidth, 0, 0, specifiedHeight); break;
+    case 270: grd = context.createLinearGradient(specifiedWidth, 0, 0, 0); break;
+    case 315: grd = context.createLinearGradient(specifiedWidth, specifiedHeight, 0, 0); break;
+    default : grd = context.createLinearGradient(0, specifiedHeight, 0, 0); break;
+  }
+
   grd.addColorStop(0,color_first);
   grd.addColorStop(1,color_second);
   context.fillStyle = grd;
-  context.fillRect(0,0,w,h);
+  context.fillRect(0,0,specifiedWidth,specifiedHeight);
   
   return canvas;
 }
@@ -97,14 +113,44 @@ function createCanvas() {
 window.onload = function() {
   generateBackground();
   angle = 135;
-  h = window.screen.height;
-  w = window.screen.width;
+  var screenHeight = window.screen.height;
+  var screenWidth = window.screen.width;
   
-  download = document.getElementById('downloadBtn');
-  download.innerText = `Download as ${w}x${h}`;
-  download.addEventListener('click', function (e) {
-    var canvas = createCanvas();
+  resolution_first = document.getElementById("resolution-first");
+  resolution_second = document.getElementById("resolution-second");
+  resolution_third = document.getElementById("resolution-third");
+  resolution_square = document.getElementById("resolution-square");
+  resolution_device = document.getElementById("resolution-device");
+
+  resolution_device.innerText += `\n[${screenWidth}x${screenHeight}]`;
+
+  resolution_first.addEventListener("click", ()=>{
+    var canvas = createCanvas(1366, 768);
     var dataURL = canvas.toDataURL('image/png').replace("image/png", "image/octet-stream");
-    download.href = dataURL;
+    resolution_first.href = dataURL;
+  });
+  
+  resolution_second.addEventListener("click", ()=>{
+    var canvas = createCanvas(1920, 1080);
+    var dataURL = canvas.toDataURL('image/png').replace("image/png", "image/octet-stream");
+    resolution_second.href = dataURL;
+  });
+  
+  resolution_third.addEventListener("click", ()=>{
+    var canvas = createCanvas(1200, 800);
+    var dataURL = canvas.toDataURL('image/png').replace("image/png", "image/octet-stream");
+    resolution_third.href = dataURL;
+  });
+  
+  resolution_square.addEventListener("click", ()=>{
+    var canvas = createCanvas(1000, 1000);
+    var dataURL = canvas.toDataURL('image/png');
+    resolution_square.href = dataURL;
+  });
+  
+  resolution_device.addEventListener("click", ()=>{
+    var canvas = createCanvas(screenWidth, screenHeight);
+    var dataURL = canvas.toDataURL('image/png');
+    resolution_device.href = dataURL;
   });
 }

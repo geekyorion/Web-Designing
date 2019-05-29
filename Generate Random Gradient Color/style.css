@@ -7,6 +7,7 @@ body {
   min-height: 100vh;
   margin: 0;
   text-align: center;
+  overflow-x: hidden;
 }
 
 button {
@@ -71,12 +72,17 @@ button:hover {
 
 .download {
   position: absolute;
-  bottom: 30px;
-  width: 100%;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.download .dropdown-menu {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .download a {
   text-decoration: none;
-  color: white;
+  color: black;
 }

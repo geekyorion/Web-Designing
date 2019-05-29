@@ -5,7 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Generate Random Gradient Color</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- custom css -->
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  <!-- google font link -->
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -17,9 +22,29 @@
   </div>
   
   <div class="download">
-    <a href="#" class="generate" id="downloadBtn" download="gradient.png">Download as Image</a>
+    <div class="btn-group dropup download">
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Download<span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#" id="resolution-first" donwload="Gradient(1366x768).png">1366x768 - 16:9</a>
+        <a class="dropdown-item" href="#" id="resolution-second" download="Gradient(1920x1080).png">1920x1080 - 16:9</a>
+        <a class="dropdown-item" href="#" id="resolution-third" download="Gradient(1200x800).png">1200x800 - 8:5</a>
+        <a class="dropdown-item" href="#" id="resolution-square" download="Square(1000x1000).png">1000x1000 - square</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#" id="resolution-device" download="Gradient(device).png">Device Resolution</a>
+      </div>
+    </div>
   </div>
+
   
+  <!-- bootstrap cdn links for script -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <!-- custom script -->
   <script src="jscode.js" type="text/javascript"></script>
 </body>
 </html>
+<!-- var dataURL = canvas.toDataURL('image/png').replace("image/png", "image/octet-stream"); -->
