@@ -1,5 +1,10 @@
 var gradient;
 var angle;
+var download;
+var color_first;
+var color_second;
+var h;
+var w;
 
 function generateRandom() {
 //   return parseInt(Math.random()*255).toString(16);
@@ -11,7 +16,10 @@ function generateBackground() {
   angle = 135;
 //   gradient = `linear-gradient(${angle}deg, #${generateRandom()}${generateRandom()}${generateRandom()}, #${generateRandom()}${generateRandom()}${generateRandom()})`;
 //   use RGB() method so that it works faster
-  gradient = `linear-gradient(${angle}deg, rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}), rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}))`;
+  color_first = `rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()})`;
+  color_second = `rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()})`;
+  gradient = `linear-gradient(${angle}deg, ${color_first}, ${color_second})`;
+//   gradient = `linear-gradient(${angle}deg, rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}), rgb(${generateRandom()}, ${generateRandom()}, ${generateRandom()}))`;
   document.body.style.background = gradient;
 }
 
@@ -71,7 +79,32 @@ function rotateClock() {
   applyRotation(newAngle);
 }
 
+function createCanvas() {
+  var canvas = document.createElement('canvas');
+  canvas.setAttribute('height', h);
+  canvas.setAttribute('width', w);
+  
+  var context = canvas.getContext("2d");
+  var grd = context.createLinearGradient(0,0,w,h);
+  grd.addColorStop(0,color_first);
+  grd.addColorStop(1,color_second);
+  context.fillStyle = grd;
+  context.fillRect(0,0,w,h);
+  
+  return canvas;
+}
+
 window.onload = function() {
   generateBackground();
   angle = 135;
+  h = window.outerHeight;
+  w = window.outerWidth;
+  
+  download = document.getElementById('downloadBtn');
+  download.innerText = `Download as ${w}x${h}`;
+  download.addEventListener('click', function (e) {
+    var canvas = createCanvas();
+    var dataURL = canvas.toDataURL('image/png').replace("image/png", "image/octet-stream");
+    download.href = dataURL;
+  });
 }
