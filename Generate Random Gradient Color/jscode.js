@@ -97,8 +97,8 @@ function createCanvas() {
 window.onload = function() {
   generateBackground();
   angle = 135;
-  h = window.outerHeight;
-  w = window.outerWidth;
+  h = window.screen.height;
+  w = window.screen.width;
   
   download = document.getElementById('downloadBtn');
   download.innerText = `Download as ${w}x${h}`;
