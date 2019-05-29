@@ -104,7 +104,7 @@ window.onload = function() {
   download.innerText = `Download as ${w}x${h}`;
   download.addEventListener('click', function (e) {
     var canvas = createCanvas();
-    var dataURL = canvas.toDataURL('image/png').replace("image/png", "image/octet-stream");
+    var dataURL = canvas.toDataURL('image/png');
     download.href = dataURL;
   });
 }
