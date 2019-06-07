@@ -143,7 +143,7 @@ window.onload = function() {
   });
   
   resolution_square.addEventListener("click", ()=>{
-    var canvas = createCanvas(1000, 1000);
+    var canvas = createCanvas(5000, 5000);
     var dataURL = canvas.toDataURL('image/png');
     resolution_square.href = dataURL;
   });
