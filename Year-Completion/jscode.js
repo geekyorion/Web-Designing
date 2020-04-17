@@ -27,7 +27,7 @@ function getTime() {
   var isLeap = (year%4 === 0 && year%100 !== 0) || (year%400 === 0);
   
   if(isLeap) {
-    monthDays[1]++;
+    monthDays[1] = 29;
     totalSeconds = 31622400;
   }
   
