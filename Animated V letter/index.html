@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>V</title>
+
+    <style>
+        body {
+            background: -webkit-linear-gradient(135deg, rgb(231, 124, 87), rgb(177, 87, 154));
+            background: -o-linear-gradient(135deg, rgb(231, 124, 87), rgb(177, 87, 154));
+            background: linear-gradient(135deg, rgb(231, 124, 87), rgb(177, 87, 154));
+            /* min-height: 100vh; to provide the gradient to the whole screen */
+            min-height: 100vh;
+            /* margin: 0; is added so that page won't show scrollbar when the content is less */
+            margin: 0;
+        }
+
+        .wrapper {
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .art {
+            box-shadow: 0 0 10px white;
+            border-radius: 10px;
+        }
+
+        .letter {
+            stroke: white;
+            stroke-width: 3;
+            stroke-dasharray: 1230;
+            fill: transparent;
+        }
+
+        .art:hover .letter {
+            animation: animate 5s linear;
+        }
+
+        @keyframes animate {
+            0% {
+                stroke-dasharray: 100 1000;
+                fill: #fff0;
+            }
+
+            50% {
+                stroke-dasharray: 10 100;
+                fill: #fff6;
+            }
+
+            100% {
+                stroke-dasharray: 1230 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <svg class="art" width="400px" height="400px">
+            <path class="letter" d="m50,50 l150,300 150,-300 h-50 l-100,200 -100,-200 z" />
+        </svg>
+    </div>
+</body>
+
+</html>
