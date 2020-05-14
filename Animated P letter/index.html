@@ -39,7 +39,7 @@
             fill-rule: evenodd;
         }
 
-        .name:hover {
+        svg:hover name {
             /* animation: animate-v1 4s linear; */
             /* animation: animate-v2 3s linear; */
             animation: animate-v3 5s linear;
@@ -96,13 +96,16 @@
                 stroke-dasharray: 0 500;
                 stroke-dashoffset: 300;
                 fill: white;
-                fill-opacity: 0.01;
+                fill-opacity: 0;
             }
+          
+            50% {
+                fill-opacity: .3;
+            }  
           
             100% {
                 stroke-dasharray: 990 0;
                 stroke-dashoffset: 990;
-                fill-opacity: 0;
             }
         }
     </style>
