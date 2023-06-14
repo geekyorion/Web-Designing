@@ -36,8 +36,12 @@
             fill: transparent;
         }
 
-        .art:hover .letter {
+        .art:hover .letter.first {
             animation: animate 5s linear;
+        }
+
+        .art:hover .letter.second {
+            animation: animate-1 5s linear;
         }
 
         @keyframes animate {
@@ -55,13 +59,47 @@
                 stroke-dasharray: 1230 0;
             }
         }
+
+        @keyframes animate-1 {
+            0% {
+                stroke-dasharray: 200 800;
+                stroke-dashoffset: 500;
+                fill: white;
+                fill-opacity: 0.01;
+            }
+
+            25% {
+                stroke-dasharray: 400 60;
+                stroke-dashoffset: 340;
+                fill-opacity: 0.09;
+            }
+
+            50% {
+                stroke-dasharray: 600 40;
+                stroke-dashoffset: 500;
+                fill-opacity: 0.12;
+            }
+
+            75% {
+                stroke-dasharray: 800 1000;
+                stroke-dashoffset: 667;
+                fill-opacity: 0.04;
+            }
+
+            100% {
+                stroke-dasharray: 1230 0;
+                stroke-dashoffset: 1230;
+                fill-opacity: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="wrapper">
         <svg class="art" width="400px" height="400px">
-            <path class="letter" d="m50,50 l150,300 150,-300 h-50 l-100,200 -100,-200 z" />
+            <path class="letter first" d="m45,50 l150,300 150,-300 h-50 l-100,200 -100,-200 z" />
+            <path class="letter second" d="m55,50 l150,300 150,-300 h-50 l-100,200 -100,-200 z" />
         </svg>
     </div>
 </body>
