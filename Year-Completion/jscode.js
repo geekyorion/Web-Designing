@@ -1,30 +1,29 @@
-var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-var monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-var currTimeEl;
-var percentEl;
-var yearEl;
-var monthsEl;
-var daysEl;
-var hoursEl;
-var minutesEl;
-var secondsEl;
+const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const monthDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+let currTimeEl;
+let percentEl;
+let yearEl;
+let monthsEl;
+let daysEl;
+let hoursEl;
+let minutesEl;
+let secondsEl;
 
-
-function getTime() {
-  var date = new Date();
-  var year = date.getFullYear();
-  var pastDays = 0;
-  var totalSeconds = 31536000;
-  var pastTime = 0;
-  var completion = 0;
+const getTime = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+  let pastDays = 0;
+  let totalSeconds = 31536000;
+  let pastTime = 0;
+  let completion = 0;
   
-  var months = date.getMonth();
-  var hours = date.getHours()
-  var minutes = date.getMinutes();
-  var seconds = date.getSeconds();
+  const months = date.getMonth();
+  const hours = date.getHours()
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
   
-  var isLeap = (year%4 === 0 && year%100 !== 0) || (year%400 === 0);
+  const isLeap = (year%4 === 0 && year%100 !== 0) || (year%400 === 0);
   
   if(isLeap) {
     monthDays[1] = 29;
